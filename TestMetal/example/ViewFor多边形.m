@@ -8,6 +8,7 @@
 
 #import "ViewFor多边形.h"
 #import "VertexType.h"
+#import "MapVertexData.h"
 
 @implementation ViewFor多边形
 
@@ -39,8 +40,8 @@
 // 设置渲染管道
 -(void)setupPipeline {
     id<MTLLibrary> defaultLibrary = [self.mtkView.device newDefaultLibrary]; // .metal
-    id<MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"vertexShader"]; // 顶点shader，vertexShader是函数名
-    id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"samplingShader"]; // 片元shader，samplingShader是函数名
+    id<MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"customVertexShader"]; // 顶点shader，vertexShader是函数名
+    id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"customFragmentShader"]; // 片元shader，samplingShader是函数名
     
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
     pipelineStateDescriptor.vertexFunction = vertexFunction;
@@ -53,31 +54,44 @@
 
 //设置顶点数据
 - (void)setupVertex {
-    static const VertexIn quadVertices[] =
+    static const CustomVertexIn quadVertices[] =
     {   // 顶点坐标，分别是x、y、z、w；    纹理坐标，x、y；
-        { {  0.5, -0.5, 0.0, 1.0 },  { (1+0.5)/2.0,(1-0.5f)/2 } },
-        { {  0.3, -0.4, 0.0, 1.0 },  { (1+0.3)/2, (1-0.4)/2 } },
-        { {  0.0, -0.6, 0.0, 1.0 },  { 0.5, (1-0.6)/2 } },
-        { { -0.2, -0.7, 0.0, 1.0 },  { (1-0.2)/2, (1-0.7)/2 } },
-        { { -0.4, -0.6, 0.0, 1.0 },  { (1-0.4)/2, (1-0.6)/2 } },
-        { { -0.5, -0.5, 0.0, 1.0 },  { (1-0.5)/2, (1-0.5)/2 } },
-        { { -0.3,  0.0, 0.0, 1.0 },  { (1-0.3)/2,  0.50 } },
-        { { -0.6,  0.2, 0.0, 1.0 },  { (1-0.6)/2,  (1+0.2)/2 } },
-        { { -0.7,  0.5, 0.0, 1.0 },  { (1-0.7)/2,  (1+0.5)/2 } },
-        { { -0.4,  0.6, 0.0, 1.0 },  { (1-0.4)/2,  (1+0.6)/2 } },
-        { {  0.1,  0.4, 0.0, 1.0 },  {  (1+0.1)/2,  (1+0.4)/2 } },
-        { {  0.5,  0.5, 0.0, 1.0 },  { (1+0.5)/2,  (1+0.5)/2 } },
+        { {  0.5, -0.5, 0.0, 1.0 }},
+        { {  0.3, -0.4, 0.0, 1.0 }},
+        { {  0.0, -0.6, 0.0, 1.0 }},
+        { { -0.2, -0.7, 0.0, 1.0 }},
+        { { -0.4, -0.6, 0.0, 1.0 }},
+        { { -0.5, -0.5, 0.0, 1.0 }},
+        { { -0.3,  0.0, 0.0, 1.0 }},
+        { { -0.6,  0.2, 0.0, 1.0 }},
+        { { -0.7,  0.5, 0.0, 1.0 }},
+        { { -0.4,  0.6, 0.0, 1.0 }},
+        { {  0.1,  0.4, 0.0, 1.0 }},
+        { {  0.5,  0.5, 0.0, 1.0 }},
     };
     
 //    VertexIn *quadVertices = new quadVertices[20];
 //    for (int i = 0; i < 20; i++){
 //
 //    }
+
     
-    self.vertices = [self.mtkView.device newBufferWithBytes:quadVertices
-                                                     length:sizeof(quadVertices)
+    NSInteger num = sizeof(quadVertices) / sizeof(CustomVertexIn);
+    NSInteger len = num*sizeof(CustomVertexIn);
+    float *pVerticeData = malloc(len);
+    for (int i = 0 ; i < num; i++){
+        CustomVertexIn tmp = quadVertices[i];
+        pVerticeData[i*4] = tmp.position.x;
+        pVerticeData[i*4+1] = tmp.position.y;
+        pVerticeData[i*4+2] = tmp.position.z;
+        pVerticeData[i*4+3] = tmp.position.w;
+    }
+    NSMutableData *data = [[NSMutableData alloc] initWithBytes:pVerticeData length:len];
+    
+    self.vertices = [self.mtkView.device newBufferWithBytes:data.bytes
+                                                     length:len
                                                     options:MTLResourceStorageModeShared]; // 创建顶点缓存
-    self.numVertices = sizeof(quadVertices) / sizeof(VertexIn); // 顶点个数
+    self.numVertices = num;//sizeof(quadVertices) / sizeof(CustomVertexIn); // 顶点个数
 }
 
 - (void)setupTexture {

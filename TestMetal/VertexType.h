@@ -15,4 +15,9 @@ typedef struct
     vector_float2 texCoords;
 } VertexIn;
 
+typedef struct
+{
+    vector_float4 position;
+} CustomVertexIn;
+
 #endif /* VertexType_h */

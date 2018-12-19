@@ -22,6 +22,8 @@
 		D788642321C91F1400514135 /* ViewFor多边形.m in Sources */ = {isa = PBXBuildFile; fileRef = D788642221C91F1400514135 /* ViewFor多边形.m */; };
 		D788642721C9263D00514135 /* zhuan.png in Resources */ = {isa = PBXBuildFile; fileRef = D788642621C9263D00514135 /* zhuan.png */; };
 		D7A4D02221CA58F500E9A962 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D02121CA58F500E9A962 /* abc.png */; };
+		D7A4D02421CA5A9C00E9A962 /* Shader3.metal in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D02321CA5A9C00E9A962 /* Shader3.metal */; };
+		D7A4D02821CA722000E9A962 /* MapVertexData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D02721CA722000E9A962 /* MapVertexData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		D788642221C91F1400514135 /* ViewFor多边形.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor多边形.m"; sourceTree = "<group>"; };
 		D788642621C9263D00514135 /* zhuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuan.png; sourceTree = "<group>"; };
 		D7A4D02121CA58F500E9A962 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
+		D7A4D02321CA5A9C00E9A962 /* Shader3.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader3.metal; sourceTree = "<group>"; };
+		D7A4D02621CA722000E9A962 /* MapVertexData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapVertexData.h; sourceTree = "<group>"; };
+		D7A4D02721CA722000E9A962 /* MapVertexData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapVertexData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +138,10 @@
 				D70DE87521C207290045C317 /* main.m */,
 				D70DE90C21C274F40045C317 /* Shader1.metal */,
 				D7169AEB21C7DA8100E4F532 /* Shader2.metal */,
+				D7A4D02321CA5A9C00E9A962 /* Shader3.metal */,
 				D7169AED21C7DF2E00E4F532 /* VertexType.h */,
+				D7A4D02621CA722000E9A962 /* MapVertexData.h */,
+				D7A4D02721CA722000E9A962 /* MapVertexData.m */,
 			);
 			path = TestMetal;
 			sourceTree = "<group>";
@@ -303,8 +311,10 @@
 			files = (
 				D70DE90D21C274F40045C317 /* Shader1.metal in Sources */,
 				D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */,
+				D7A4D02821CA722000E9A962 /* MapVertexData.m in Sources */,
 				D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */,
 				D70DE86B21C207270045C317 /* ViewController.m in Sources */,
+				D7A4D02421CA5A9C00E9A962 /* Shader3.metal in Sources */,
 				D70DE87621C207290045C317 /* main.m in Sources */,
 				D70DE89F21C207AD0045C317 /* ViewFor三角形.m in Sources */,
 				D788642321C91F1400514135 /* ViewFor多边形.m in Sources */,
