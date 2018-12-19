@@ -16,12 +16,12 @@
 		D70DE88021C207290045C317 /* TestMetalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DE87F21C207290045C317 /* TestMetalTests.m */; };
 		D70DE88B21C207290045C317 /* TestMetalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DE88A21C207290045C317 /* TestMetalUITests.m */; };
 		D70DE89F21C207AD0045C317 /* ViewFor三角形.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DE89E21C207AD0045C317 /* ViewFor三角形.m */; };
-		D70DE90B21C274260045C317 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D70DE90A21C274260045C317 /* abc.png */; };
 		D70DE90D21C274F40045C317 /* Shader1.metal in Sources */ = {isa = PBXBuildFile; fileRef = D70DE90C21C274F40045C317 /* Shader1.metal */; };
 		D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */ = {isa = PBXBuildFile; fileRef = D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */; };
 		D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */ = {isa = PBXBuildFile; fileRef = D7169AEB21C7DA8100E4F532 /* Shader2.metal */; };
 		D788642321C91F1400514135 /* ViewFor多边形.m in Sources */ = {isa = PBXBuildFile; fileRef = D788642221C91F1400514135 /* ViewFor多边形.m */; };
 		D788642721C9263D00514135 /* zhuan.png in Resources */ = {isa = PBXBuildFile; fileRef = D788642621C9263D00514135 /* zhuan.png */; };
+		D7A4D02221CA58F500E9A962 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D02121CA58F500E9A962 /* abc.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 		D70DE88C21C207290045C317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70DE89D21C207AD0045C317 /* ViewFor三角形.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewFor三角形.h"; sourceTree = "<group>"; };
 		D70DE89E21C207AD0045C317 /* ViewFor三角形.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewFor三角形.m"; sourceTree = "<group>"; };
-		D70DE90A21C274260045C317 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = abc.png; path = "../../../../Desktop/扫地机设计图/首页改版/03切图/abc.png"; sourceTree = "<group>"; };
 		D70DE90C21C274F40045C317 /* Shader1.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader1.metal; sourceTree = "<group>"; };
 		D7169AE821C7D4A200E4F532 /* ViewFor图片绘制.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor图片绘制.h"; sourceTree = "<group>"; };
 		D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor图片绘制.m"; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		D788642121C91F1400514135 /* ViewFor多边形.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor多边形.h"; sourceTree = "<group>"; };
 		D788642221C91F1400514135 /* ViewFor多边形.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor多边形.m"; sourceTree = "<group>"; };
 		D788642621C9263D00514135 /* zhuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuan.png; sourceTree = "<group>"; };
+		D7A4D02121CA58F500E9A962 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 		D70DE86521C207270045C317 /* TestMetal */ = {
 			isa = PBXGroup;
 			children = (
+				D7A4D02121CA58F500E9A962 /* abc.png */,
 				D70DE89C21C207AD0045C317 /* example */,
 				D70DE86621C207270045C317 /* AppDelegate.h */,
 				D70DE86721C207270045C317 /* AppDelegate.m */,
@@ -129,7 +130,6 @@
 				D70DE87121C207290045C317 /* LaunchScreen.storyboard */,
 				D70DE87421C207290045C317 /* Info.plist */,
 				D788642621C9263D00514135 /* zhuan.png */,
-				D70DE90A21C274260045C317 /* abc.png */,
 				D70DE87521C207290045C317 /* main.m */,
 				D70DE90C21C274F40045C317 /* Shader1.metal */,
 				D7169AEB21C7DA8100E4F532 /* Shader2.metal */,
@@ -273,9 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70DE87321C207290045C317 /* LaunchScreen.storyboard in Resources */,
-				D70DE90B21C274260045C317 /* abc.png in Resources */,
 				D788642721C9263D00514135 /* zhuan.png in Resources */,
 				D70DE87021C207290045C317 /* Assets.xcassets in Resources */,
+				D7A4D02221CA58F500E9A962 /* abc.png in Resources */,
 				D70DE86E21C207270045C317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
