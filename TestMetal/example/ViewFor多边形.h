@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface MapVertexInfo : NSObject
+@property (nonatomic, strong) id<MTLBuffer> vertices;
+@property (nonatomic, assign) NSUInteger numVertices;
+@end
+
 @interface ViewFor多边形 : UIView<MTKViewDelegate>
 
 // view
@@ -23,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id<MTLTexture> texture;
 @property (nonatomic, strong) id<MTLBuffer> vertices;
 @property (nonatomic, assign) NSUInteger numVertices;
+
+@property (nonatomic, strong) NSArray *verticesList;
+
 
 @end
 

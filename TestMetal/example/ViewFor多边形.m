@@ -10,6 +10,9 @@
 #import "VertexType.h"
 #import "MapVertexData.h"
 
+@implementation MapVertexInfo
+@end
+
 @implementation ViewFor多边形
 
 -(id)initWithFrame:(CGRect)frame
@@ -74,6 +77,8 @@
 //    for (int i = 0; i < 20; i++){
 //
 //    }
+    
+    [self parseMapVertexs];
 
     
     NSInteger num = sizeof(quadVertices) / sizeof(CustomVertexIn);
@@ -88,10 +93,96 @@
     }
     NSMutableData *data = [[NSMutableData alloc] initWithBytes:pVerticeData length:len];
     
+    free(pVerticeData);
+    
     self.vertices = [self.mtkView.device newBufferWithBytes:data.bytes
                                                      length:len
                                                     options:MTLResourceStorageModeShared]; // 创建顶点缓存
     self.numVertices = num;//sizeof(quadVertices) / sizeof(CustomVertexIn); // 顶点个数
+}
+
+-(void)parseMapVertexs
+{
+    CGFloat minx=0,miny=0,maxx=0,maxy=0;
+    BOOL bFirst = YES;
+    
+    NSArray *mapList = [MapVertexData rawDataSource];
+    NSMutableArray *tmpArray = [NSMutableArray new];
+    for (NSString *item in mapList){
+        NSArray *array = [item componentsSeparatedByString:@":"];
+        if (array.count != 2){
+            continue;
+        }
+        NSString *string = array[1];
+        array = [string componentsSeparatedByString:@","];
+        
+        NSMutableArray *tmpSubArray = [NSMutableArray new];
+        
+        for (NSString *item2 in array){
+            NSArray *array2 = [item2 componentsSeparatedByString:@"_"];
+            if (array2.count != 2){
+                continue;
+            }
+            CGFloat x = [array2[0] floatValue];
+            CGFloat y = [array2[1] floatValue];
+            if (bFirst){
+                bFirst = NO;
+                minx = maxx = x;
+                miny = maxy = y;
+            }
+            else{
+                minx = minx > x? x:minx;
+                miny = miny > y? y:miny;
+                maxx = maxx > x? maxx:x;
+                maxy = maxy > y? maxy:y;
+            }
+            
+            [tmpSubArray addObject:[NSValue valueWithCGPoint:CGPointMake(x, y)]];
+        }
+        
+        [tmpArray addObject:tmpSubArray];
+    }
+    
+    CGFloat absX = fabs(minx)>fabs(maxx)? fabs(minx):fabs(maxx);
+    CGFloat absY = fabs(miny)>fabs(maxy)? fabs(miny):fabs(maxy);
+    absX = absX!=0? absX:1;
+    absY = absY!=0? absY:1;
+    
+    NSMutableArray *verticesList = [NSMutableArray new];
+    for (NSArray *item1 in tmpArray){
+        if (item1.count < 3){
+            continue;
+        }
+        NSInteger num = item1.count;
+        NSInteger len = num*sizeof(float)*4;
+        float *pVerticeData = malloc(len);
+        NSInteger pos = 0;
+        
+        for (NSValue *value1 in item1){
+            CGPoint point = value1.CGPointValue;
+            
+            CGFloat x = point.x/absX;
+            CGFloat y = point.y/absY;
+            pVerticeData[pos++] = x;
+            pVerticeData[pos++] = y;
+            pVerticeData[pos++] = 0;
+            pVerticeData[pos++] = 1;
+        }
+        
+        NSMutableData *data = [[NSMutableData alloc] initWithBytes:pVerticeData length:len];
+        free(pVerticeData);
+        
+        id<MTLBuffer> vertices = [self.mtkView.device newBufferWithBytes:data.bytes
+                                                                  length:len
+                                                                 options:MTLResourceStorageModeShared];
+        
+        MapVertexInfo *info = [MapVertexInfo new];
+        info.vertices = vertices;
+        info.numVertices = num;
+        [verticesList addObject:info];
+    }
+    
+    self.verticesList = verticesList;
 }
 
 - (void)setupTexture {
@@ -119,8 +210,53 @@
 - (void)drawInMTKView:(nonnull MTKView *)view {
     // 每次渲染都要单独创建一个CommandBuffer
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
+//    MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
+//    // MTLRenderPassDescriptor描述一系列attachments的值，类似GL的FrameBuffer；同时也用来创建MTLRenderCommandEncoder
+//    if(renderPassDescriptor != nil)
+//    {
+//        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.5, 0.5, 1.0f); // 设置默认颜色
+//        id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor]; //编码绘制指令的Encoder
+//        [renderEncoder setViewport:(MTLViewport){0.0, 0.0, self.viewportSize.x, self.viewportSize.y, -1.0, 1.0 }]; // 设置显示区域
+//        [renderEncoder setRenderPipelineState:self.pipelineState]; // 设置渲染管道，以保证顶点和片元两个shader会被调用
+//
+//        [renderEncoder setVertexBuffer:self.vertices
+//                                offset:0
+//                               atIndex:0]; // 设置顶点缓存
+//
+//        [renderEncoder setFragmentTexture:self.texture
+//                                  atIndex:0]; // 设置纹理
+//
+//        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip
+//                          vertexStart:0
+//                          vertexCount:self.numVertices]; // 绘制
+//
+//        [renderEncoder endEncoding]; // 结束
+//
+//        [commandBuffer presentDrawable:view.currentDrawable]; // 显示
+//    }
+    
+//    MapVertexInfo *info = [MapVertexInfo new];
+//    info.vertices = self.vertices;
+//    info.numVertices = self.numVertices;
+//    [self drawView:view vertices:info commandBuffer:commandBuffer];
+    
+//    for (MapVertexInfo *item in self.verticesList){
+//        [self drawView:view vertices:item commandBuffer:commandBuffer];
+//    }
+    static NSInteger spos = 0;
+    spos++;
+    if (spos >= self.verticesList.count){
+        spos = 0;
+    }
+    spos = 28;
+    [self drawView:view vertices:self.verticesList[spos] commandBuffer:commandBuffer];
+    [commandBuffer presentDrawable:view.currentDrawable]; // 显示
+    [commandBuffer commit]; // 提交；
+}
+
+-(void)drawView:(MTKView *)view vertices:(MapVertexInfo *)verInfo commandBuffer:(id<MTLCommandBuffer>)commandBuffer
+{
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
-    // MTLRenderPassDescriptor描述一系列attachments的值，类似GL的FrameBuffer；同时也用来创建MTLRenderCommandEncoder
     if(renderPassDescriptor != nil)
     {
         renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.5, 0.5, 1.0f); // 设置默认颜色
@@ -128,7 +264,7 @@
         [renderEncoder setViewport:(MTLViewport){0.0, 0.0, self.viewportSize.x, self.viewportSize.y, -1.0, 1.0 }]; // 设置显示区域
         [renderEncoder setRenderPipelineState:self.pipelineState]; // 设置渲染管道，以保证顶点和片元两个shader会被调用
         
-        [renderEncoder setVertexBuffer:self.vertices
+        [renderEncoder setVertexBuffer:verInfo.vertices
                                 offset:0
                                atIndex:0]; // 设置顶点缓存
         
@@ -137,14 +273,11 @@
         
         [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip
                           vertexStart:0
-                          vertexCount:self.numVertices]; // 绘制
+                          vertexCount:verInfo.numVertices]; // 绘制
         
         [renderEncoder endEncoding]; // 结束
         
-        [commandBuffer presentDrawable:view.currentDrawable]; // 显示
     }
-    
-    [commandBuffer commit]; // 提交；
 }
 
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
