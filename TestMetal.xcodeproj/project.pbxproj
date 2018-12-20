@@ -26,6 +26,10 @@
 		D75883D021CB9039003F9616 /* ViewFor灰度计算.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883CF21CB9039003F9616 /* ViewFor灰度计算.m */; };
 		D75883D221CB9055003F9616 /* ViewFor灰度计算.metal in Sources */ = {isa = PBXBuildFile; fileRef = D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */; };
 		D75883DF21CBC123003F9616 /* def.png in Resources */ = {isa = PBXBuildFile; fileRef = D75883DE21CBC123003F9616 /* def.png */; };
+		D75883E221CBC77F003F9616 /* ViewFor视频渲染YUV.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883E121CBC77F003F9616 /* ViewFor视频渲染YUV.m */; };
+		D75883E421CBC7AF003F9616 /* ViewFor视频渲染YUV.metal in Sources */ = {isa = PBXBuildFile; fileRef = D75883E321CBC7AF003F9616 /* ViewFor视频渲染YUV.metal */; };
+		D75883E721CBC7ED003F9616 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = D75883E621CBC7ED003F9616 /* test.mov */; };
+		D75883EA21CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883E921CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m */; };
 		D788642321C91F1400514135 /* ViewFor多边形.m in Sources */ = {isa = PBXBuildFile; fileRef = D788642221C91F1400514135 /* ViewFor多边形.m */; };
 		D788642721C9263D00514135 /* zhuan.png in Resources */ = {isa = PBXBuildFile; fileRef = D788642621C9263D00514135 /* zhuan.png */; };
 		D7A4D02221CA58F500E9A962 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D02121CA58F500E9A962 /* abc.png */; };
@@ -87,6 +91,13 @@
 		D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = "ViewFor灰度计算.metal"; sourceTree = "<group>"; };
 		D75883DB21CBBE0B003F9616 /* ViewFor灰度计算Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor灰度计算Type.h"; sourceTree = "<group>"; };
 		D75883DE21CBC123003F9616 /* def.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = def.png; sourceTree = "<group>"; };
+		D75883E021CBC77F003F9616 /* ViewFor视频渲染YUV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor视频渲染YUV.h"; sourceTree = "<group>"; };
+		D75883E121CBC77F003F9616 /* ViewFor视频渲染YUV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor视频渲染YUV.m"; sourceTree = "<group>"; };
+		D75883E321CBC7AF003F9616 /* ViewFor视频渲染YUV.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = "ViewFor视频渲染YUV.metal"; sourceTree = "<group>"; };
+		D75883E521CBC7BD003F9616 /* ViewFor视频渲染YUVType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor视频渲染YUVType.h"; sourceTree = "<group>"; };
+		D75883E621CBC7ED003F9616 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
+		D75883E821CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor视频渲染YUVAssetReader.h"; sourceTree = "<group>"; };
+		D75883E921CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor视频渲染YUVAssetReader.m"; sourceTree = "<group>"; };
 		D788642121C91F1400514135 /* ViewFor多边形.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor多边形.h"; sourceTree = "<group>"; };
 		D788642221C91F1400514135 /* ViewFor多边形.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor多边形.m"; sourceTree = "<group>"; };
 		D788642621C9263D00514135 /* zhuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuan.png; sourceTree = "<group>"; };
@@ -144,6 +155,7 @@
 		D70DE86521C207270045C317 /* TestMetal */ = {
 			isa = PBXGroup;
 			children = (
+				D75883E621CBC7ED003F9616 /* test.mov */,
 				D75883DE21CBC123003F9616 /* def.png */,
 				D7A4D02121CA58F500E9A962 /* abc.png */,
 				D75883C521CB7C39003F9616 /* BaseMetalView.h */,
@@ -206,6 +218,12 @@
 				D75883CF21CB9039003F9616 /* ViewFor灰度计算.m */,
 				D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */,
 				D75883DB21CBBE0B003F9616 /* ViewFor灰度计算Type.h */,
+				D75883E021CBC77F003F9616 /* ViewFor视频渲染YUV.h */,
+				D75883E121CBC77F003F9616 /* ViewFor视频渲染YUV.m */,
+				D75883E321CBC7AF003F9616 /* ViewFor视频渲染YUV.metal */,
+				D75883E521CBC7BD003F9616 /* ViewFor视频渲染YUVType.h */,
+				D75883E821CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.h */,
+				D75883E921CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -313,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75883E721CBC7ED003F9616 /* test.mov in Resources */,
 				D70DE87321C207290045C317 /* LaunchScreen.storyboard in Resources */,
 				D788642721C9263D00514135 /* zhuan.png in Resources */,
 				D70DE87021C207290045C317 /* Assets.xcassets in Resources */,
@@ -355,10 +374,13 @@
 				D70DE87621C207290045C317 /* main.m in Sources */,
 				D75883CD21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m in Sources */,
 				D75883D021CB9039003F9616 /* ViewFor灰度计算.m in Sources */,
+				D75883E221CBC77F003F9616 /* ViewFor视频渲染YUV.m in Sources */,
 				D70DE89F21C207AD0045C317 /* ViewFor三角形.m in Sources */,
 				D788642321C91F1400514135 /* ViewFor多边形.m in Sources */,
+				D75883E421CBC7AF003F9616 /* ViewFor视频渲染YUV.metal in Sources */,
 				D70DE86821C207270045C317 /* AppDelegate.m in Sources */,
 				D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */,
+				D75883EA21CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

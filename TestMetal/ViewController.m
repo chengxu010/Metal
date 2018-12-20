@@ -13,6 +13,7 @@
 #import "ViewFor三维变换.h"
 #import "ViewFor摄像头渲染RGB.h"
 #import "ViewFor灰度计算.h"
+#import "ViewFor视频渲染YUV.h"
 
 @interface ViewController ()
 
@@ -32,7 +33,7 @@
 {
     [super viewDidAppear:animated];
     
-    NSInteger example = 5;
+    NSInteger example = 6;
     CGRect subViewFrame = CGRectMake(50, 100, 300, 300);
     subViewFrame = self.view.bounds;
     if (example == 0){
@@ -62,6 +63,11 @@
     }
     else if (example == 5){
         ViewFor灰度计算 *aView = [[ViewFor灰度计算 alloc] initWithFrame:subViewFrame];
+        aView.backgroundColor = [UIColor lightGrayColor];
+        [self.view addSubview:aView];
+    }
+    else if (example == 6){
+        ViewFor视频渲染YUV *aView = [[ViewFor视频渲染YUV alloc] initWithFrame:subViewFrame];
         aView.backgroundColor = [UIColor lightGrayColor];
         [self.view addSubview:aView];
     }
