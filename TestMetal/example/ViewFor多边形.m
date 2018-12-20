@@ -148,6 +148,8 @@
     absX = absX!=0? absX:1;
     absY = absY!=0? absY:1;
     
+    CGFloat xl = sqrt(absX*absX + absY*absY);
+    
     NSMutableArray *verticesList = [NSMutableArray new];
     for (NSArray *item1 in tmpArray){
         if (item1.count < 3){
@@ -161,8 +163,8 @@
         for (NSValue *value1 in item1){
             CGPoint point = value1.CGPointValue;
             
-            CGFloat x = point.x/absX;
-            CGFloat y = point.y/absY;
+            CGFloat x = point.x/xl;
+            CGFloat y = point.y/xl;
             pVerticeData[pos++] = x;
             pVerticeData[pos++] = y;
             pVerticeData[pos++] = 0;
@@ -240,16 +242,17 @@
 //    info.numVertices = self.numVertices;
 //    [self drawView:view vertices:info commandBuffer:commandBuffer];
     
-//    for (MapVertexInfo *item in self.verticesList){
-//        [self drawView:view vertices:item commandBuffer:commandBuffer];
-//    }
-    static NSInteger spos = 0;
-    spos++;
-    if (spos >= self.verticesList.count){
-        spos = 0;
+    for (MapVertexInfo *item in self.verticesList){
+        [self drawView:view vertices:item commandBuffer:commandBuffer];
     }
-    spos = 28;
-    [self drawView:view vertices:self.verticesList[spos] commandBuffer:commandBuffer];
+//    static NSInteger spos = 0;
+//    spos++;
+//    if (spos >= self.verticesList.count){
+//        spos = 0;
+//    }
+////    spos = 28;
+//    NSLog(@"spos = %ld",spos);
+//    [self drawView:view vertices:self.verticesList[spos] commandBuffer:commandBuffer];
     [commandBuffer presentDrawable:view.currentDrawable]; // 显示
     [commandBuffer commit]; // 提交；
 }

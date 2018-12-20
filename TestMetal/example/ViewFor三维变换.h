@@ -1,8 +1,8 @@
 //
-//  ViewFor三角形.h
+//  ViewFor三维变换.h
 //  TestMetal
 //
-//  Created by dongzhiqiang on 2018/12/13.
+//  Created by dongzhiqiang on 2018/12/20.
 //  Copyright © 2018 dongzhiqiang. All rights reserved.
 //
 
@@ -11,9 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewFor三角形 : BaseMetalView{
-    dispatch_semaphore_t _renderSemaphore;
-}
+@interface ViewFor三维变换 : BaseMetalView
 
 @end
 

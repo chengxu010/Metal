@@ -12,6 +12,30 @@
 
 +(NSArray *)rawDataSource
 {
+    /*
+     {
+     //for test
+     for( int i = 0 ; i < approx_curve.size(); i++ ){
+     const std::vector<cv::Point2f>& item = approx_curve[i];
+     printf("@\"%d:",i);
+     for (int j = 0; j < item.size(); j++){
+     cv::Point2f point = item[j];
+     
+     CGFloat x = point.x;
+     CGFloat y = point.y;
+     printf("(");
+     printf("%.2f",x);
+     printf("_");
+     printf("%.2f",y);
+     printf(")");
+     if (j < item.size() - 1){
+     printf(",");
+     }
+     }
+     printf("\",\n");
+     }
+     }
+     */
     return @[
              @"0:-597.00_873.00,-588.67_881.33",
              @"1:-612.00_873.00",

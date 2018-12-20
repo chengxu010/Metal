@@ -7,22 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MetalKit/MetalKit.h>
+#import "BaseMetalView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewFor图片绘制 : UIView<MTKViewDelegate>
-
-// view
-@property (nonatomic, strong) MTKView *mtkView;
-
-// data
-@property (nonatomic, assign) vector_uint2 viewportSize;
-@property (nonatomic, strong) id<MTLRenderPipelineState> pipelineState;
-@property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
-@property (nonatomic, strong) id<MTLTexture> texture;
-@property (nonatomic, strong) id<MTLBuffer> vertices;
-@property (nonatomic, assign) NSUInteger numVertices;
+@interface ViewFor图片绘制:BaseMetalView
 
 @end
 

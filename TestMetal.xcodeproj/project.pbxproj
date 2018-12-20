@@ -19,6 +19,13 @@
 		D70DE90D21C274F40045C317 /* Shader1.metal in Sources */ = {isa = PBXBuildFile; fileRef = D70DE90C21C274F40045C317 /* Shader1.metal */; };
 		D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */ = {isa = PBXBuildFile; fileRef = D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */; };
 		D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */ = {isa = PBXBuildFile; fileRef = D7169AEB21C7DA8100E4F532 /* Shader2.metal */; };
+		D75883C421CB7C07003F9616 /* ViewFor三维变换.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883C321CB7C07003F9616 /* ViewFor三维变换.m */; };
+		D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883C621CB7C39003F9616 /* BaseMetalView.m */; };
+		D75883CA21CB7DEB003F9616 /* ViewFor三维变换.metal in Sources */ = {isa = PBXBuildFile; fileRef = D75883C921CB7DEB003F9616 /* ViewFor三维变换.metal */; };
+		D75883CD21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883CC21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m */; };
+		D75883D021CB9039003F9616 /* ViewFor灰度计算.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883CF21CB9039003F9616 /* ViewFor灰度计算.m */; };
+		D75883D221CB9055003F9616 /* ViewFor灰度计算.metal in Sources */ = {isa = PBXBuildFile; fileRef = D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */; };
+		D75883DF21CBC123003F9616 /* def.png in Resources */ = {isa = PBXBuildFile; fileRef = D75883DE21CBC123003F9616 /* def.png */; };
 		D788642321C91F1400514135 /* ViewFor多边形.m in Sources */ = {isa = PBXBuildFile; fileRef = D788642221C91F1400514135 /* ViewFor多边形.m */; };
 		D788642721C9263D00514135 /* zhuan.png in Resources */ = {isa = PBXBuildFile; fileRef = D788642621C9263D00514135 /* zhuan.png */; };
 		D7A4D02221CA58F500E9A962 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D02121CA58F500E9A962 /* abc.png */; };
@@ -67,6 +74,19 @@
 		D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor图片绘制.m"; sourceTree = "<group>"; };
 		D7169AEB21C7DA8100E4F532 /* Shader2.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader2.metal; sourceTree = "<group>"; };
 		D7169AED21C7DF2E00E4F532 /* VertexType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexType.h; sourceTree = "<group>"; };
+		D75883C221CB7C07003F9616 /* ViewFor三维变换.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor三维变换.h"; sourceTree = "<group>"; };
+		D75883C321CB7C07003F9616 /* ViewFor三维变换.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor三维变换.m"; sourceTree = "<group>"; };
+		D75883C521CB7C39003F9616 /* BaseMetalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMetalView.h; sourceTree = "<group>"; };
+		D75883C621CB7C39003F9616 /* BaseMetalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMetalView.m; sourceTree = "<group>"; };
+		D75883C821CB7DB7003F9616 /* ViewFor三维变换Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor三维变换Type.h"; sourceTree = "<group>"; };
+		D75883C921CB7DEB003F9616 /* ViewFor三维变换.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = "ViewFor三维变换.metal"; sourceTree = "<group>"; };
+		D75883CB21CB88F3003F9616 /* ViewFor摄像头渲染RGB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor摄像头渲染RGB.h"; sourceTree = "<group>"; };
+		D75883CC21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor摄像头渲染RGB.m"; sourceTree = "<group>"; };
+		D75883CE21CB9039003F9616 /* ViewFor灰度计算.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor灰度计算.h"; sourceTree = "<group>"; };
+		D75883CF21CB9039003F9616 /* ViewFor灰度计算.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor灰度计算.m"; sourceTree = "<group>"; };
+		D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = "ViewFor灰度计算.metal"; sourceTree = "<group>"; };
+		D75883DB21CBBE0B003F9616 /* ViewFor灰度计算Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor灰度计算Type.h"; sourceTree = "<group>"; };
+		D75883DE21CBC123003F9616 /* def.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = def.png; sourceTree = "<group>"; };
 		D788642121C91F1400514135 /* ViewFor多边形.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor多边形.h"; sourceTree = "<group>"; };
 		D788642221C91F1400514135 /* ViewFor多边形.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor多边形.m"; sourceTree = "<group>"; };
 		D788642621C9263D00514135 /* zhuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuan.png; sourceTree = "<group>"; };
@@ -124,7 +144,10 @@
 		D70DE86521C207270045C317 /* TestMetal */ = {
 			isa = PBXGroup;
 			children = (
+				D75883DE21CBC123003F9616 /* def.png */,
 				D7A4D02121CA58F500E9A962 /* abc.png */,
+				D75883C521CB7C39003F9616 /* BaseMetalView.h */,
+				D75883C621CB7C39003F9616 /* BaseMetalView.m */,
 				D70DE89C21C207AD0045C317 /* example */,
 				D70DE86621C207270045C317 /* AppDelegate.h */,
 				D70DE86721C207270045C317 /* AppDelegate.m */,
@@ -173,6 +196,16 @@
 				D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */,
 				D788642121C91F1400514135 /* ViewFor多边形.h */,
 				D788642221C91F1400514135 /* ViewFor多边形.m */,
+				D75883C221CB7C07003F9616 /* ViewFor三维变换.h */,
+				D75883C321CB7C07003F9616 /* ViewFor三维变换.m */,
+				D75883C821CB7DB7003F9616 /* ViewFor三维变换Type.h */,
+				D75883C921CB7DEB003F9616 /* ViewFor三维变换.metal */,
+				D75883CB21CB88F3003F9616 /* ViewFor摄像头渲染RGB.h */,
+				D75883CC21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m */,
+				D75883CE21CB9039003F9616 /* ViewFor灰度计算.h */,
+				D75883CF21CB9039003F9616 /* ViewFor灰度计算.m */,
+				D75883D121CB9055003F9616 /* ViewFor灰度计算.metal */,
+				D75883DB21CBBE0B003F9616 /* ViewFor灰度计算Type.h */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -283,6 +316,7 @@
 				D70DE87321C207290045C317 /* LaunchScreen.storyboard in Resources */,
 				D788642721C9263D00514135 /* zhuan.png in Resources */,
 				D70DE87021C207290045C317 /* Assets.xcassets in Resources */,
+				D75883DF21CBC123003F9616 /* def.png in Resources */,
 				D7A4D02221CA58F500E9A962 /* abc.png in Resources */,
 				D70DE86E21C207270045C317 /* Main.storyboard in Resources */,
 			);
@@ -311,14 +345,20 @@
 			files = (
 				D70DE90D21C274F40045C317 /* Shader1.metal in Sources */,
 				D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */,
+				D75883D221CB9055003F9616 /* ViewFor灰度计算.metal in Sources */,
 				D7A4D02821CA722000E9A962 /* MapVertexData.m in Sources */,
 				D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */,
+				D75883C421CB7C07003F9616 /* ViewFor三维变换.m in Sources */,
+				D75883CA21CB7DEB003F9616 /* ViewFor三维变换.metal in Sources */,
 				D70DE86B21C207270045C317 /* ViewController.m in Sources */,
 				D7A4D02421CA5A9C00E9A962 /* Shader3.metal in Sources */,
 				D70DE87621C207290045C317 /* main.m in Sources */,
+				D75883CD21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m in Sources */,
+				D75883D021CB9039003F9616 /* ViewFor灰度计算.m in Sources */,
 				D70DE89F21C207AD0045C317 /* ViewFor三角形.m in Sources */,
 				D788642321C91F1400514135 /* ViewFor多边形.m in Sources */,
 				D70DE86821C207270045C317 /* AppDelegate.m in Sources */,
+				D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
