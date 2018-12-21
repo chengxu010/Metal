@@ -35,6 +35,7 @@
 		D7A4D02221CA58F500E9A962 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D02121CA58F500E9A962 /* abc.png */; };
 		D7A4D02421CA5A9C00E9A962 /* Shader3.metal in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D02321CA5A9C00E9A962 /* Shader3.metal */; };
 		D7A4D02821CA722000E9A962 /* MapVertexData.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D02721CA722000E9A962 /* MapVertexData.m */; };
+		D7A9E7F521CCF1BC00960E6C /* TestMatrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A9E7F421CCF1BC00960E6C /* TestMatrix4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		D7A4D02321CA5A9C00E9A962 /* Shader3.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader3.metal; sourceTree = "<group>"; };
 		D7A4D02621CA722000E9A962 /* MapVertexData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapVertexData.h; sourceTree = "<group>"; };
 		D7A4D02721CA722000E9A962 /* MapVertexData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapVertexData.m; sourceTree = "<group>"; };
+		D7A9E7F321CCF1BC00960E6C /* TestMatrix4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMatrix4.h; sourceTree = "<group>"; };
+		D7A9E7F421CCF1BC00960E6C /* TestMatrix4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMatrix4.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				D7169AED21C7DF2E00E4F532 /* VertexType.h */,
 				D7A4D02621CA722000E9A962 /* MapVertexData.h */,
 				D7A4D02721CA722000E9A962 /* MapVertexData.m */,
+				D7A9E7F321CCF1BC00960E6C /* TestMatrix4.h */,
+				D7A9E7F421CCF1BC00960E6C /* TestMatrix4.m */,
 			);
 			path = TestMetal;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				D788642321C91F1400514135 /* ViewFor多边形.m in Sources */,
 				D75883E421CBC7AF003F9616 /* ViewFor视频渲染YUV.metal in Sources */,
 				D70DE86821C207270045C317 /* AppDelegate.m in Sources */,
+				D7A9E7F521CCF1BC00960E6C /* TestMatrix4.m in Sources */,
 				D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */,
 				D75883EA21CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m in Sources */,
 			);

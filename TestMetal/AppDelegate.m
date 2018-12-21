@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestMatrix4.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [TestMatrix4 test];
+    
     return YES;
 }
 
