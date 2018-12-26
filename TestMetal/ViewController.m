@@ -33,7 +33,7 @@
 {
     [super viewDidAppear:animated];
     
-    NSInteger example = 6;
+    NSInteger example = 2;
     CGRect subViewFrame = CGRectMake(50, 100, 300, 300);
     subViewFrame = self.view.bounds;
     if (example == 0){

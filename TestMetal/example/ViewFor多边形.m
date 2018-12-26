@@ -9,6 +9,7 @@
 #import "ViewFor多边形.h"
 #import "VertexType.h"
 #import "MapVertexData.h"
+#import "ViewFor多边形Triangle.h"
 
 @implementation MapVertexInfo
 @end
@@ -79,26 +80,28 @@
 //    }
     
     [self parseMapVertexs];
+    
+    
 
     
-    NSInteger num = sizeof(quadVertices) / sizeof(CustomVertexIn);
-    NSInteger len = num*sizeof(CustomVertexIn);
-    float *pVerticeData = malloc(len);
-    for (int i = 0 ; i < num; i++){
-        CustomVertexIn tmp = quadVertices[i];
-        pVerticeData[i*4] = tmp.position.x;
-        pVerticeData[i*4+1] = tmp.position.y;
-        pVerticeData[i*4+2] = tmp.position.z;
-        pVerticeData[i*4+3] = tmp.position.w;
-    }
-    NSMutableData *data = [[NSMutableData alloc] initWithBytes:pVerticeData length:len];
-    
-    free(pVerticeData);
-    
-    self.vertices = [self.mtkView.device newBufferWithBytes:data.bytes
-                                                     length:len
-                                                    options:MTLResourceStorageModeShared]; // 创建顶点缓存
-    self.numVertices = num;//sizeof(quadVertices) / sizeof(CustomVertexIn); // 顶点个数
+//    NSInteger num = sizeof(quadVertices) / sizeof(CustomVertexIn);
+//    NSInteger len = num*sizeof(CustomVertexIn);
+//    float *pVerticeData = malloc(len);
+//    for (int i = 0 ; i < num; i++){
+//        CustomVertexIn tmp = quadVertices[i];
+//        pVerticeData[i*4] = tmp.position.x;
+//        pVerticeData[i*4+1] = tmp.position.y;
+//        pVerticeData[i*4+2] = tmp.position.z;
+//        pVerticeData[i*4+3] = tmp.position.w;
+//    }
+//    NSMutableData *data = [[NSMutableData alloc] initWithBytes:pVerticeData length:len];
+//
+//    free(pVerticeData);
+//
+//    self.vertices = [self.mtkView.device newBufferWithBytes:data.bytes
+//                                                     length:len
+//                                                    options:MTLResourceStorageModeShared]; // 创建顶点缓存
+//    self.numVertices = num;//sizeof(quadVertices) / sizeof(CustomVertexIn); // 顶点个数
 }
 
 -(void)parseMapVertexs
@@ -143,6 +146,12 @@
         [tmpArray addObject:tmpSubArray];
     }
     
+    {
+        //for test
+//        NSArray *tmpPoints =  [ViewFor多边形Triangle parseTriangle:tmpArray[110]];
+        
+    }
+    
     CGFloat absX = fabs(minx)>fabs(maxx)? fabs(minx):fabs(maxx);
     CGFloat absY = fabs(miny)>fabs(maxy)? fabs(miny):fabs(maxy);
     absX = absX!=0? absX:1;
@@ -155,19 +164,31 @@
         if (item1.count < 3){
             continue;
         }
-        NSInteger num = item1.count;
+        
+        NSArray *tmpPoints =  [ViewFor多边形Triangle parseTriangle:item1];
+        if (tmpPoints.count == 0){
+            continue;
+        }
+        
+        NSInteger num = tmpPoints.count;
         NSInteger len = num*sizeof(float)*4;
         float *pVerticeData = malloc(len);
         NSInteger pos = 0;
         
-        for (NSValue *value1 in item1){
-            CGPoint point = value1.CGPointValue;
+        for (NSArray *value1 in tmpPoints){
+            if (value1.count != 3){
+                continue;
+            }
+//            CGPoint point = value1.CGPointValue;
+//            CGFloat x = point.x/xl;
+//            CGFloat y = point.y/xl;
+            CGFloat x = [value1[0] floatValue];
+            CGFloat y = [value1[1] floatValue];
+            CGFloat z = [value1[2] floatValue];
             
-            CGFloat x = point.x/xl;
-            CGFloat y = point.y/xl;
-            pVerticeData[pos++] = x;
-            pVerticeData[pos++] = y;
-            pVerticeData[pos++] = 0;
+            pVerticeData[pos++] = x/xl;
+            pVerticeData[pos++] = y/xl;
+            pVerticeData[pos++] = z/xl;
             pVerticeData[pos++] = 1;
         }
         
@@ -242,17 +263,18 @@
 //    info.numVertices = self.numVertices;
 //    [self drawView:view vertices:info commandBuffer:commandBuffer];
     
-    for (MapVertexInfo *item in self.verticesList){
-        [self drawView:view vertices:item commandBuffer:commandBuffer];
-    }
-//    static NSInteger spos = 0;
-//    spos++;
-//    if (spos >= self.verticesList.count){
-//        spos = 0;
+//    for (MapVertexInfo *item in self.verticesList){
+//        [self drawView:view vertices:item commandBuffer:commandBuffer];
 //    }
-////    spos = 28;
-//    NSLog(@"spos = %ld",spos);
-//    [self drawView:view vertices:self.verticesList[spos] commandBuffer:commandBuffer];
+    
+    static NSInteger spos = 0;
+    spos++;
+    if (spos >= self.verticesList.count){
+        spos = 0;
+    }
+    spos = 23;
+    NSLog(@"spos = %ld",spos);
+    [self drawView:view vertices:self.verticesList[spos] commandBuffer:commandBuffer];
     [commandBuffer presentDrawable:view.currentDrawable]; // 显示
     [commandBuffer commit]; // 提交；
 }

@@ -90,6 +90,35 @@
     GLKMatrix4 matrix4_17;
     
     
+    //GLKMatrix2 GLKMatrix4GetMatrix2(GLKMatrix4 matrix);
+    //GLKMatrix3 GLKMatrix4GetMatrix3(GLKMatrix4 matrix);
+    //GLKVector4 GLKMatrix4GetColumn(GLKMatrix4 matrix, int column);
+    //GLKVector4 GLKMatrix4GetRow(GLKMatrix4 matrix, int row);
+    //GLKMatrix4 GLKMatrix4SetColumn(GLKMatrix4 matrix, int column, GLKVector4 vector);
+    //GLKMatrix4 GLKMatrix4SetRow(GLKMatrix4 matrix, int row, GLKVector4 vector);
+    
+    //返回矩阵的逆
+    //GLKMatrix4 GLKMatrix4Invert(GLKMatrix4 matrix, bool *isInvertible);
+    BOOL isInvertible;
+    GLKMatrix4 matrix4_18 = GLKMatrix4Invert(matrix4_1,&isInvertible);
+    
+    //返回矩阵的转置
+    GLKMatrix4 matrix4_19 = GLKMatrix4Transpose(matrix4_1);
+    
+    //返回矩阵的逆转置
+    BOOL isInvertible2;
+    GLKMatrix4 matrix4_20 = GLKMatrix4InvertAndTranspose(matrix4_1,&isInvertible2);
+    
+    //返回两个矩阵的乘积
+    GLKMatrix4 matrix4_21 = GLKMatrix4Multiply(matrix4_1,matrix4_18);
+    GLKMatrix4 matrix4_22 = GLKMatrix4Multiply(matrix4_18,matrix4_1);
+    
+    //旋转矩阵
+    //GLKMatrix4 GLKMatrix4Rotate(GLKMatrix4 matrix, float radians, float x, float y, float z);
+    GLKMatrix4 matrix4_23 = GLKMatrix4Rotate(matrix4_1,GLKMathDegreesToRadians(30),0,0,1);
+    
+    //返回一个新的4x4矩阵，该矩阵通过将矩阵与围绕矢量的旋转连接而创建。
+    
     
     NSLog(@"");
 }

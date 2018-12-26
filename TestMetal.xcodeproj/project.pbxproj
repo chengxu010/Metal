@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70B403121D3AA0100929D14 /* getopt1.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B3FFC21D3AA0100929D14 /* getopt1.c */; };
+		D70B403221D3AA0100929D14 /* backend_pgm.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B3FFE21D3AA0100929D14 /* backend_pgm.c */; };
+		D70B403321D3AA0100929D14 /* trace.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B3FFF21D3AA0100929D14 /* trace.c */; };
+		D70B403421D3AA0100929D14 /* curve.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B400221D3AA0100929D14 /* curve.c */; };
+		D70B403521D3AA0100929D14 /* lzw.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B400321D3AA0100929D14 /* lzw.c */; };
+		D70B403621D3AA0100929D14 /* mkbitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B400421D3AA0100929D14 /* mkbitmap.c */; };
+		D70B403721D3AA0100929D14 /* backend_dxf.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B400821D3AA0100929D14 /* backend_dxf.c */; };
+		D70B403821D3AA0100929D14 /* backend_pdf.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B400921D3AA0100929D14 /* backend_pdf.c */; };
+		D70B403921D3AA0100929D14 /* libpotrace-export.sym in Resources */ = {isa = PBXBuildFile; fileRef = D70B400B21D3AA0100929D14 /* libpotrace-export.sym */; };
+		D70B403A21D3AA0100929D14 /* backend_geojson.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401121D3AA0100929D14 /* backend_geojson.c */; };
+		D70B403B21D3AA0100929D14 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401521D3AA0100929D14 /* render.c */; };
+		D70B403C21D3AA0100929D14 /* potracelib_demo.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401621D3AA0100929D14 /* potracelib_demo.c */; };
+		D70B403D21D3AA0100929D14 /* Makefile.am in Resources */ = {isa = PBXBuildFile; fileRef = D70B401A21D3AA0100929D14 /* Makefile.am */; };
+		D70B403E21D3AA0100929D14 /* flate.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401B21D3AA0100929D14 /* flate.c */; };
+		D70B403F21D3AA0100929D14 /* progress_bar.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401C21D3AA0100929D14 /* progress_bar.c */; };
+		D70B404021D3AA0100929D14 /* trans.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401D21D3AA0100929D14 /* trans.c */; };
+		D70B404121D3AA0100929D14 /* decompose.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B401F21D3AA0100929D14 /* decompose.c */; };
+		D70B404221D3AA0100929D14 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402121D3AA0100929D14 /* main.c */; };
+		D70B404321D3AA0100929D14 /* bbox.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402221D3AA0100929D14 /* bbox.c */; };
+		D70B404421D3AA0100929D14 /* backend_svg.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402421D3AA0100929D14 /* backend_svg.c */; };
+		D70B404521D3AA0100929D14 /* greymap.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402521D3AA0100929D14 /* greymap.c */; };
+		D70B404621D3AA0100929D14 /* backend_eps.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402721D3AA0100929D14 /* backend_eps.c */; };
+		D70B404721D3AA0100929D14 /* bitmap_io.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402921D3AA0100929D14 /* bitmap_io.c */; };
+		D70B404821D3AA0100929D14 /* backend_xfig.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402A21D3AA0100929D14 /* backend_xfig.c */; };
+		D70B404921D3AA0100929D14 /* potracelib.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402C21D3AA0100929D14 /* potracelib.c */; };
+		D70B404A21D3AA0100929D14 /* Makefile.in in Resources */ = {isa = PBXBuildFile; fileRef = D70B402D21D3AA0100929D14 /* Makefile.in */; };
+		D70B404B21D3AA0100929D14 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = D70B402E21D3AA0100929D14 /* getopt.c */; };
 		D70DE86821C207270045C317 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DE86721C207270045C317 /* AppDelegate.m */; };
 		D70DE86B21C207270045C317 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DE86A21C207270045C317 /* ViewController.m */; };
 		D70DE86E21C207270045C317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70DE86C21C207270045C317 /* Main.storyboard */; };
@@ -19,6 +46,7 @@
 		D70DE90D21C274F40045C317 /* Shader1.metal in Sources */ = {isa = PBXBuildFile; fileRef = D70DE90C21C274F40045C317 /* Shader1.metal */; };
 		D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */ = {isa = PBXBuildFile; fileRef = D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */; };
 		D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */ = {isa = PBXBuildFile; fileRef = D7169AEB21C7DA8100E4F532 /* Shader2.metal */; };
+		D718B37D21D263AF00272065 /* ViewFor多边形Triangle.mm in Sources */ = {isa = PBXBuildFile; fileRef = D718B37C21D263AF00272065 /* ViewFor多边形Triangle.mm */; };
 		D75883C421CB7C07003F9616 /* ViewFor三维变换.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883C321CB7C07003F9616 /* ViewFor三维变换.m */; };
 		D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75883C621CB7C39003F9616 /* BaseMetalView.m */; };
 		D75883CA21CB7DEB003F9616 /* ViewFor三维变换.metal in Sources */ = {isa = PBXBuildFile; fileRef = D75883C921CB7DEB003F9616 /* ViewFor三维变换.metal */; };
@@ -56,6 +84,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D70B3FFA21D3AA0100929D14 /* bbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bbox.h; sourceTree = "<group>"; };
+		D70B3FFB21D3AA0100929D14 /* progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progress.h; sourceTree = "<group>"; };
+		D70B3FFC21D3AA0100929D14 /* getopt1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt1.c; sourceTree = "<group>"; };
+		D70B3FFD21D3AA0100929D14 /* decompose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decompose.h; sourceTree = "<group>"; };
+		D70B3FFE21D3AA0100929D14 /* backend_pgm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_pgm.c; sourceTree = "<group>"; };
+		D70B3FFF21D3AA0100929D14 /* trace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trace.c; sourceTree = "<group>"; };
+		D70B400021D3AA0100929D14 /* progress_bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progress_bar.h; sourceTree = "<group>"; };
+		D70B400121D3AA0100929D14 /* trans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trans.h; sourceTree = "<group>"; };
+		D70B400221D3AA0100929D14 /* curve.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = curve.c; sourceTree = "<group>"; };
+		D70B400321D3AA0100929D14 /* lzw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzw.c; sourceTree = "<group>"; };
+		D70B400421D3AA0100929D14 /* mkbitmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mkbitmap.c; sourceTree = "<group>"; };
+		D70B400521D3AA0100929D14 /* flate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flate.h; sourceTree = "<group>"; };
+		D70B400621D3AA0100929D14 /* bitops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitops.h; sourceTree = "<group>"; };
+		D70B400721D3AA0100929D14 /* greymap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = greymap.h; sourceTree = "<group>"; };
+		D70B400821D3AA0100929D14 /* backend_dxf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_dxf.c; sourceTree = "<group>"; };
+		D70B400921D3AA0100929D14 /* backend_pdf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_pdf.c; sourceTree = "<group>"; };
+		D70B400A21D3AA0100929D14 /* backend_svg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_svg.h; sourceTree = "<group>"; };
+		D70B400B21D3AA0100929D14 /* libpotrace-export.sym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpotrace-export.sym"; sourceTree = "<group>"; };
+		D70B400C21D3AA0100929D14 /* backend_xfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_xfig.h; sourceTree = "<group>"; };
+		D70B400F21D3AA0100929D14 /* getopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getopt.h; sourceTree = "<group>"; };
+		D70B401021D3AA0100929D14 /* bitmap_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap_io.h; sourceTree = "<group>"; };
+		D70B401121D3AA0100929D14 /* backend_geojson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_geojson.c; sourceTree = "<group>"; };
+		D70B401221D3AA0100929D14 /* backend_eps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_eps.h; sourceTree = "<group>"; };
+		D70B401321D3AA0100929D14 /* auxiliary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auxiliary.h; sourceTree = "<group>"; };
+		D70B401421D3AA0100929D14 /* lists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lists.h; sourceTree = "<group>"; };
+		D70B401521D3AA0100929D14 /* render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = render.c; sourceTree = "<group>"; };
+		D70B401621D3AA0100929D14 /* potracelib_demo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = potracelib_demo.c; sourceTree = "<group>"; };
+		D70B401721D3AA0100929D14 /* potracelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = potracelib.h; sourceTree = "<group>"; };
+		D70B401821D3AA0100929D14 /* lzw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzw.h; sourceTree = "<group>"; };
+		D70B401921D3AA0100929D14 /* curve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curve.h; sourceTree = "<group>"; };
+		D70B401A21D3AA0100929D14 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		D70B401B21D3AA0100929D14 /* flate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flate.c; sourceTree = "<group>"; };
+		D70B401C21D3AA0100929D14 /* progress_bar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = progress_bar.c; sourceTree = "<group>"; };
+		D70B401D21D3AA0100929D14 /* trans.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trans.c; sourceTree = "<group>"; };
+		D70B401E21D3AA0100929D14 /* backend_pgm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_pgm.h; sourceTree = "<group>"; };
+		D70B401F21D3AA0100929D14 /* decompose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decompose.c; sourceTree = "<group>"; };
+		D70B402021D3AA0100929D14 /* trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trace.h; sourceTree = "<group>"; };
+		D70B402121D3AA0100929D14 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D70B402221D3AA0100929D14 /* bbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bbox.c; sourceTree = "<group>"; };
+		D70B402321D3AA0100929D14 /* backend_pdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_pdf.h; sourceTree = "<group>"; };
+		D70B402421D3AA0100929D14 /* backend_svg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_svg.c; sourceTree = "<group>"; };
+		D70B402521D3AA0100929D14 /* greymap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = greymap.c; sourceTree = "<group>"; };
+		D70B402621D3AA0100929D14 /* backend_dxf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_dxf.h; sourceTree = "<group>"; };
+		D70B402721D3AA0100929D14 /* backend_eps.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_eps.c; sourceTree = "<group>"; };
+		D70B402821D3AA0100929D14 /* backend_geojson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend_geojson.h; sourceTree = "<group>"; };
+		D70B402921D3AA0100929D14 /* bitmap_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitmap_io.c; sourceTree = "<group>"; };
+		D70B402A21D3AA0100929D14 /* backend_xfig.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backend_xfig.c; sourceTree = "<group>"; };
+		D70B402B21D3AA0100929D14 /* bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap.h; sourceTree = "<group>"; };
+		D70B402C21D3AA0100929D14 /* potracelib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = potracelib.c; sourceTree = "<group>"; };
+		D70B402D21D3AA0100929D14 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		D70B402E21D3AA0100929D14 /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt.c; sourceTree = "<group>"; };
+		D70B402F21D3AA0100929D14 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		D70B403021D3AA0100929D14 /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
+		D70B404C21D3AA4000929D14 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		D70DE86321C207270045C317 /* TestMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70DE86621C207270045C317 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D70DE86721C207270045C317 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +161,9 @@
 		D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor图片绘制.m"; sourceTree = "<group>"; };
 		D7169AEB21C7DA8100E4F532 /* Shader2.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader2.metal; sourceTree = "<group>"; };
 		D7169AED21C7DF2E00E4F532 /* VertexType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexType.h; sourceTree = "<group>"; };
+		D718B37A21D2610100272065 /* TRIANGLE.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TRIANGLE.H; sourceTree = "<group>"; };
+		D718B37B21D263AF00272065 /* ViewFor多边形Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor多边形Triangle.h"; sourceTree = "<group>"; };
+		D718B37C21D263AF00272065 /* ViewFor多边形Triangle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "ViewFor多边形Triangle.mm"; sourceTree = "<group>"; };
 		D75883C221CB7C07003F9616 /* ViewFor三维变换.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewFor三维变换.h"; sourceTree = "<group>"; };
 		D75883C321CB7C07003F9616 /* ViewFor三维变换.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewFor三维变换.m"; sourceTree = "<group>"; };
 		D75883C521CB7C39003F9616 /* BaseMetalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMetalView.h; sourceTree = "<group>"; };
@@ -135,9 +220,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D70B3FF821D3AA0100929D14 /* potrace */ = {
+			isa = PBXGroup;
+			children = (
+				D70B404C21D3AA4000929D14 /* main.h */,
+				D70B3FFA21D3AA0100929D14 /* bbox.h */,
+				D70B3FFB21D3AA0100929D14 /* progress.h */,
+				D70B3FFC21D3AA0100929D14 /* getopt1.c */,
+				D70B3FFD21D3AA0100929D14 /* decompose.h */,
+				D70B3FFE21D3AA0100929D14 /* backend_pgm.c */,
+				D70B3FFF21D3AA0100929D14 /* trace.c */,
+				D70B400021D3AA0100929D14 /* progress_bar.h */,
+				D70B400121D3AA0100929D14 /* trans.h */,
+				D70B400221D3AA0100929D14 /* curve.c */,
+				D70B400321D3AA0100929D14 /* lzw.c */,
+				D70B400421D3AA0100929D14 /* mkbitmap.c */,
+				D70B400521D3AA0100929D14 /* flate.h */,
+				D70B400621D3AA0100929D14 /* bitops.h */,
+				D70B400721D3AA0100929D14 /* greymap.h */,
+				D70B400821D3AA0100929D14 /* backend_dxf.c */,
+				D70B400921D3AA0100929D14 /* backend_pdf.c */,
+				D70B400A21D3AA0100929D14 /* backend_svg.h */,
+				D70B400B21D3AA0100929D14 /* libpotrace-export.sym */,
+				D70B400C21D3AA0100929D14 /* backend_xfig.h */,
+				D70B400D21D3AA0100929D14 /* include */,
+				D70B401021D3AA0100929D14 /* bitmap_io.h */,
+				D70B401121D3AA0100929D14 /* backend_geojson.c */,
+				D70B401221D3AA0100929D14 /* backend_eps.h */,
+				D70B401321D3AA0100929D14 /* auxiliary.h */,
+				D70B401421D3AA0100929D14 /* lists.h */,
+				D70B401521D3AA0100929D14 /* render.c */,
+				D70B401621D3AA0100929D14 /* potracelib_demo.c */,
+				D70B401721D3AA0100929D14 /* potracelib.h */,
+				D70B401821D3AA0100929D14 /* lzw.h */,
+				D70B401921D3AA0100929D14 /* curve.h */,
+				D70B401A21D3AA0100929D14 /* Makefile.am */,
+				D70B401B21D3AA0100929D14 /* flate.c */,
+				D70B401C21D3AA0100929D14 /* progress_bar.c */,
+				D70B401D21D3AA0100929D14 /* trans.c */,
+				D70B401E21D3AA0100929D14 /* backend_pgm.h */,
+				D70B401F21D3AA0100929D14 /* decompose.c */,
+				D70B402021D3AA0100929D14 /* trace.h */,
+				D70B402121D3AA0100929D14 /* main.c */,
+				D70B402221D3AA0100929D14 /* bbox.c */,
+				D70B402321D3AA0100929D14 /* backend_pdf.h */,
+				D70B402421D3AA0100929D14 /* backend_svg.c */,
+				D70B402521D3AA0100929D14 /* greymap.c */,
+				D70B402621D3AA0100929D14 /* backend_dxf.h */,
+				D70B402721D3AA0100929D14 /* backend_eps.c */,
+				D70B402821D3AA0100929D14 /* backend_geojson.h */,
+				D70B402921D3AA0100929D14 /* bitmap_io.c */,
+				D70B402A21D3AA0100929D14 /* backend_xfig.c */,
+				D70B402B21D3AA0100929D14 /* bitmap.h */,
+				D70B402C21D3AA0100929D14 /* potracelib.c */,
+				D70B402D21D3AA0100929D14 /* Makefile.in */,
+				D70B402E21D3AA0100929D14 /* getopt.c */,
+				D70B402F21D3AA0100929D14 /* platform.h */,
+				D70B403021D3AA0100929D14 /* render.h */,
+			);
+			path = potrace;
+			sourceTree = "<group>";
+		};
+		D70B400D21D3AA0100929D14 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D70B400E21D3AA0100929D14 /* getopt */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D70B400E21D3AA0100929D14 /* getopt */ = {
+			isa = PBXGroup;
+			children = (
+				D70B400F21D3AA0100929D14 /* getopt.h */,
+			);
+			path = getopt;
+			sourceTree = "<group>";
+		};
 		D70DE85A21C207270045C317 = {
 			isa = PBXGroup;
 			children = (
+				D70B3FF821D3AA0100929D14 /* potrace */,
 				D70DE86521C207270045C317 /* TestMetal */,
 				D70DE87E21C207290045C317 /* TestMetalTests */,
 				D70DE88921C207290045C317 /* TestMetalUITests */,
@@ -158,6 +321,7 @@
 		D70DE86521C207270045C317 /* TestMetal */ = {
 			isa = PBXGroup;
 			children = (
+				D718B37A21D2610100272065 /* TRIANGLE.H */,
 				D75883E621CBC7ED003F9616 /* test.mov */,
 				D75883DE21CBC123003F9616 /* def.png */,
 				D7A4D02121CA58F500E9A962 /* abc.png */,
@@ -213,6 +377,8 @@
 				D7169AE921C7D4A200E4F532 /* ViewFor图片绘制.m */,
 				D788642121C91F1400514135 /* ViewFor多边形.h */,
 				D788642221C91F1400514135 /* ViewFor多边形.m */,
+				D718B37B21D263AF00272065 /* ViewFor多边形Triangle.h */,
+				D718B37C21D263AF00272065 /* ViewFor多边形Triangle.mm */,
 				D75883C221CB7C07003F9616 /* ViewFor三维变换.h */,
 				D75883C321CB7C07003F9616 /* ViewFor三维变换.m */,
 				D75883C821CB7DB7003F9616 /* ViewFor三维变换Type.h */,
@@ -336,11 +502,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70B404A21D3AA0100929D14 /* Makefile.in in Resources */,
+				D70B403921D3AA0100929D14 /* libpotrace-export.sym in Resources */,
 				D75883E721CBC7ED003F9616 /* test.mov in Resources */,
 				D70DE87321C207290045C317 /* LaunchScreen.storyboard in Resources */,
 				D788642721C9263D00514135 /* zhuan.png in Resources */,
 				D70DE87021C207290045C317 /* Assets.xcassets in Resources */,
 				D75883DF21CBC123003F9616 /* def.png in Resources */,
+				D70B403D21D3AA0100929D14 /* Makefile.am in Resources */,
 				D7A4D02221CA58F500E9A962 /* abc.png in Resources */,
 				D70DE86E21C207270045C317 /* Main.storyboard in Resources */,
 			);
@@ -370,23 +539,48 @@
 				D70DE90D21C274F40045C317 /* Shader1.metal in Sources */,
 				D7169AEA21C7D4A200E4F532 /* ViewFor图片绘制.m in Sources */,
 				D75883D221CB9055003F9616 /* ViewFor灰度计算.metal in Sources */,
+				D70B403821D3AA0100929D14 /* backend_pdf.c in Sources */,
+				D70B404321D3AA0100929D14 /* bbox.c in Sources */,
 				D7A4D02821CA722000E9A962 /* MapVertexData.m in Sources */,
 				D7169AEC21C7DA8100E4F532 /* Shader2.metal in Sources */,
+				D70B404521D3AA0100929D14 /* greymap.c in Sources */,
 				D75883C421CB7C07003F9616 /* ViewFor三维变换.m in Sources */,
+				D70B404621D3AA0100929D14 /* backend_eps.c in Sources */,
+				D70B404B21D3AA0100929D14 /* getopt.c in Sources */,
 				D75883CA21CB7DEB003F9616 /* ViewFor三维变换.metal in Sources */,
+				D70B403421D3AA0100929D14 /* curve.c in Sources */,
 				D70DE86B21C207270045C317 /* ViewController.m in Sources */,
+				D70B404021D3AA0100929D14 /* trans.c in Sources */,
 				D7A4D02421CA5A9C00E9A962 /* Shader3.metal in Sources */,
+				D70B403C21D3AA0100929D14 /* potracelib_demo.c in Sources */,
 				D70DE87621C207290045C317 /* main.m in Sources */,
 				D75883CD21CB88F3003F9616 /* ViewFor摄像头渲染RGB.m in Sources */,
 				D75883D021CB9039003F9616 /* ViewFor灰度计算.m in Sources */,
+				D70B403A21D3AA0100929D14 /* backend_geojson.c in Sources */,
 				D75883E221CBC77F003F9616 /* ViewFor视频渲染YUV.m in Sources */,
 				D70DE89F21C207AD0045C317 /* ViewFor三角形.m in Sources */,
+				D70B403B21D3AA0100929D14 /* render.c in Sources */,
+				D70B403721D3AA0100929D14 /* backend_dxf.c in Sources */,
+				D70B403621D3AA0100929D14 /* mkbitmap.c in Sources */,
 				D788642321C91F1400514135 /* ViewFor多边形.m in Sources */,
+				D70B404721D3AA0100929D14 /* bitmap_io.c in Sources */,
+				D70B403321D3AA0100929D14 /* trace.c in Sources */,
 				D75883E421CBC7AF003F9616 /* ViewFor视频渲染YUV.metal in Sources */,
+				D70B403221D3AA0100929D14 /* backend_pgm.c in Sources */,
 				D70DE86821C207270045C317 /* AppDelegate.m in Sources */,
 				D7A9E7F521CCF1BC00960E6C /* TestMatrix4.m in Sources */,
+				D70B403E21D3AA0100929D14 /* flate.c in Sources */,
+				D70B403121D3AA0100929D14 /* getopt1.c in Sources */,
+				D70B404421D3AA0100929D14 /* backend_svg.c in Sources */,
 				D75883C721CB7C39003F9616 /* BaseMetalView.m in Sources */,
 				D75883EA21CBC92E003F9616 /* ViewFor视频渲染YUVAssetReader.m in Sources */,
+				D718B37D21D263AF00272065 /* ViewFor多边形Triangle.mm in Sources */,
+				D70B403F21D3AA0100929D14 /* progress_bar.c in Sources */,
+				D70B404821D3AA0100929D14 /* backend_xfig.c in Sources */,
+				D70B403521D3AA0100929D14 /* lzw.c in Sources */,
+				D70B404121D3AA0100929D14 /* decompose.c in Sources */,
+				D70B404921D3AA0100929D14 /* potracelib.c in Sources */,
+				D70B404221D3AA0100929D14 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
